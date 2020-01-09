@@ -20,7 +20,7 @@ class MyDocument extends Document {
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta name="theme-color" content="#2196F3" />
           <meta name="description" content="Progressive Web App made with Next.js" />
-          <link rel="manifest" href="/public/manifest.json" />
+          <link rel="manifest" href="/manifest.json" />
           <link rel="shortcut icon" href="/public/icons/favicon.ico" />
         </Head>
         <body className="app">
