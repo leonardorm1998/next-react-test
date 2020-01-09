@@ -1,0 +1,30 @@
+.row {
+  display: flex;
+  width: 300px
+}
+
+.mt-r-05 {
+  margin-right: 0.5rem;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.5rem;
+}
+
+.list-container {
+  margin-bottom: 1rem;
+}
+
+.comment {
+  font-weight: bold;
+  font-size: 14px;
+  margin: 0;
+}
+
+a.link {
+  text-decoration: none;
+  font-size: 20px;
+  color: green;
+}
