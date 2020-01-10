@@ -5,9 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "start": "next start",
-    "build": "next build",
-    "export": "next export",
-    "deploy": "npm run build && npm run export"
+    "build": "next build"
   },
   "dependencies": {
     "@zeit/next-css": "^1.0.1",
@@ -17,6 +15,7 @@
   },
   "devDependencies": {
     "image-webpack-loader": "^6.0.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
     "url-loader": "^3.0.0"
   }
 }
