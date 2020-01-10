@@ -1,21 +1,108 @@
 {
-  "name": "my-app",
-  "version": "0.1.0",
+  "name": "next-react-test",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "start": "next start",
-    "build": "next build"
+    "build": "next build",
+    "export": "rimraf build && next export --outdir=build",
+    "deploy": "npm run build && npm run export",
+    "lint": "tslint -c tslint.json 'pages/*.{ts,tsx}'",
+    "commit": "npx git-cz",
+    "test": "jest --coverage",
+    "test:watch": "jest --watch",
+    "test:prod": "npm test --no-cache"
+  },
+  "keywords": [
+    "react",
+    "next",
+    "typescript"
+  ],
+  "moduleFileExtensions": [
+    "ts",
+    "tsx",
+    "js",
+    "jsx"
+  ],
+  "author": "Ingresso.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/leonardorm1998/next-react-test.git"
   },
   "dependencies": {
+    "@types/enzyme": "^3.10.4",
+    "@types/enzyme-adapter-react-16": "^1.0.5",
+    "@types/jest": "^24.0.25",
     "@zeit/next-css": "^1.0.1",
     "next": "9.1.7",
     "react": "16.12.0",
     "react-dom": "16.12.0"
   },
   "devDependencies": {
-    "image-webpack-loader": "^6.0.0",
+    "@types/node": "^13.1.6",
+    "@types/react": "^16.9.17",
+    "@zeit/next-typescript": "^1.1.1",
+    "babel-jest": "^24.9.0",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
+    "jest": "^24.9.0",
     "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "prettier": "^1.19.1",
+    "tslint": "^5.20.1",
+    "tslint-react": "^4.1.0",
+    "typescript": "^3.7.4",
     "url-loader": "^3.0.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-push": "npm run lint && npm test"
+    }
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true
+  },
+  "jest": {
+    "setupFiles": [
+      "<rootDir>/jest.setup.js"
+    ],
+    "transform": {
+      ".(ts|tsx)": "babel-jest"
+    },
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|jsx)$",
+    "testPathIgnorePatterns": [
+      "<rootDir>/node_modules/",
+      "<rootDir>/build/",
+      "<rootDir>/.next/",
+      "<rootDir>/public/"
+    ],
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx"
+    ],
+    "coverageReporters": [
+      "json-summary",
+      "text",
+      "lcov"
+    ],
+    "coveragePathIgnorePatterns": [
+      "<rootDir>/node_modules/",
+      "<rootDir>/build/",
+      "<rootDir>/.next/",
+      "<rootDir>/public/"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 90,
+        "functions": 95,
+        "lines": 95,
+        "statements": 95
+      }
+    },
+    "collectCoverage": true,
+    "testURL": "http://localhost/"
   }
 }

@@ -1,6 +1,6 @@
 {
-  "name": "Next.js PWA <>",
-  "short_name": "Next.js Pwa",
+  "name": "APP Next.js PWA <>",
+  "short_name": "Next.js PWA",
   "description": "Progressive Web App made with Next.js",
   "start_url": "/",
   "scope": "/",

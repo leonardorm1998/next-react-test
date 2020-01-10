@@ -1,8 +1,8 @@
-import React from 'react'
-import Head from 'next/head'
-import Link from 'next/link'
+import Head from 'next/head';
+import Link from 'next/link';
+import React from 'react';
 
-import "../styles/styles.css"
+import '../styles/styles.css';
 
 export default () => (
   <>
@@ -16,13 +16,13 @@ export default () => (
       <p>
         To get started, edit <code>pages/index.js</code> and save to reload.
       </p>
-      <div className='row'>
-        <div className='mt-r-05'>
+      <div className="row">
+        <div className="mt-r-05">
           <Link href="/about">
             <a>About</a>
           </Link>
         </div>
-        <div className='mt-r-05'>
+        <div className="mt-r-05">
           <Link href="/news">
             <a>News</a>
           </Link>
@@ -30,4 +30,4 @@ export default () => (
       </div>
     </div>
   </>
-)
+);

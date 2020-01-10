@@ -1,0 +1,32 @@
+{
+  "member-access": [
+    true,
+    "no-public"
+  ],
+  "defaultSeverity": "error",
+  "extends": [
+    "tslint:latest",
+    "tslint-react"
+  ],
+  "jsRules": {},
+  "rules": {
+    "quotemark": [
+      true,
+      "single",
+      "jsx-double"
+    ],
+    "no-implicit-dependencies": [
+      true,
+      "dev"
+    ],
+    "interface-name": [
+      true,
+      "always-prefix"
+    ],
+    "no-submodule-imports": false,
+    "jsx-no-multiline-js": false,
+    "jsx-no-lambda": false,
+    "jsx-boolean-value": false
+  },
+  "rulesDirectory": []
+}
