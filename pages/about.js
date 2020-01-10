@@ -1,6 +1,8 @@
 import React from 'react'
 import Head from 'next/head'
 
+import imgGoogle from '../public/icons/img-google-1.jpg'; // Tell Webpack this JS file uses this image
+
 import "../styles/styles.css";
 
 const About = () => (
@@ -21,6 +23,22 @@ const About = () => (
       <b>
         Generated 2 paragraphs, 188 words, 1287 bytes of Lorem Ipsum
       </b>
+      <div>
+        <img src={imgGoogle} alt="img-google" width="300" height="300" />
+        <img src={imgGoogle} alt="img-google" width="300" height="300" />
+        <img src={imgGoogle} alt="img-google" width="300" height="300" />
+        <img src={imgGoogle} alt="img-google" width="300" height="300" />
+        <img src={imgGoogle} alt="img-google" width="300" height="300" />
+        <img src={imgGoogle} alt="img-google" width="300" height="300" />
+        <img src={imgGoogle} alt="img-google" width="300" height="300" />
+        <img src={imgGoogle} alt="img-google" width="300" height="300" />
+        <img src={imgGoogle} alt="img-google" width="300" height="300" />
+        <img src={imgGoogle} alt="img-google" width="300" height="300" />
+        <img src={imgGoogle} alt="img-google" width="300" height="300" />
+        <img src={imgGoogle} alt="img-google" width="300" height="300" />
+        <img src={imgGoogle} alt="img-google" width="300" height="300" />
+        <img src={imgGoogle} alt="img-google" width="300" height="300" />
+      </div>
     </div>
   </>
 )
