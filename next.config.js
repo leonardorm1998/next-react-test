@@ -1,7 +1,11 @@
 const withCSS = require('@zeit/next-css');
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin")
+const withImages = require('next-images')
+const withOffline = require('next-offline')
+const withPlugins = require('next-compose-plugins');
+const path = require('path');
 
-module.exports = withCSS({
+const nextConfig = {
   cssModules: false,
   webpack: (config) => {
     if (config.mode === 'production') {
@@ -11,17 +15,18 @@ module.exports = withCSS({
         )
       }
     }
-    config.module.rules.push(
-      {
-        test: /\.(png|jpg|gif|svg|eot|ttf|woff|woff2)$/,
-        use: {
-          loader: 'url-loader',
-          options: {
-            limit: 100000
-          }
-        }
-      }
-    )
     return config
   }
-})
+}
+
+module.exports = withPlugins([
+  [withImages],
+  [withCSS],
+  [withOffline, {
+    generateSw: false,
+    workboxOpts: {
+      swSrc: path.join(__dirname, 'service-worker.js'),
+      importWorkboxFrom: 'local'
+    }
+  }],
+], nextConfig);

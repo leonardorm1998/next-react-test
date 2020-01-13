@@ -2,7 +2,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import React from 'react';
 
-import '../styles/styles.css';
+import '../public/styles/main.css';
 
 export default () => (
   <>

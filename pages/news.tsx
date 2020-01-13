@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import React from 'react';
 
-import '../styles/styles.css';
+import '../public/styles/main.css';
 
 interface INews {
   title: string;

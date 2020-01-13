@@ -28,7 +28,6 @@
   ],
   "include": [
     "./typings/*.d.ts",
-    "**/*.tsx",
-    "next-env.d.ts"
+    "**/*.tsx"
   ]
 }

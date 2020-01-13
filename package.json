@@ -31,17 +31,20 @@
     "url": "https://github.com/leonardorm1998/next-react-test.git"
   },
   "dependencies": {
-    "@types/enzyme": "^3.10.4",
-    "@types/enzyme-adapter-react-16": "^1.0.5",
-    "@types/jest": "^24.0.25",
     "@zeit/next-css": "^1.0.1",
     "next": "9.1.7",
+    "next-compose-plugins": "^2.2.0",
+    "next-images": "^1.3.0",
+    "next-offline": "^4.0.6",
     "react": "16.12.0",
     "react-dom": "16.12.0"
   },
   "devDependencies": {
     "@types/node": "^13.1.6",
     "@types/react": "^16.9.17",
+    "@types/enzyme": "^3.10.4",
+    "@types/enzyme-adapter-react-16": "^1.0.5",
+    "@types/jest": "^24.0.25",
     "@zeit/next-typescript": "^1.1.1",
     "babel-jest": "^24.9.0",
     "enzyme": "^3.11.0",
@@ -49,14 +52,24 @@
     "jest": "^24.9.0",
     "optimize-css-assets-webpack-plugin": "^5.0.3",
     "prettier": "^1.19.1",
+    "react-test-renderer": "^16.12.0",
     "tslint": "^5.20.1",
     "tslint-react": "^4.1.0",
-    "typescript": "^3.7.4",
-    "url-loader": "^3.0.0"
+    "typescript": "^3.7.4"
   },
   "husky": {
     "hooks": {
       "pre-push": "npm run lint && npm test"
+    }
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    },
+    "css": "[name]_[local]__[hash:base64:5]",
+    "validate-commit-msg": {
+      "types": "conventional-commit-types",
+      "helpMessage": "Use \"npm run commit\" instead, we use conventional-changelog format :) (https://github.com/commitizen/cz-cli)"
     }
   },
   "prettier": {
@@ -68,13 +81,18 @@
       "<rootDir>/jest.setup.js"
     ],
     "transform": {
-      ".(ts|tsx)": "babel-jest"
+      "^.+\\.(ts|tsx)$": "babel-jest"
     },
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2)$": "<rootDir>/__mocks__/fileMock.js",
+      "\\.(css|less)$": "<rootDir>/__mocks__/styleMock.js"
+    },
+    "preset": "ts-jest",
+    "testEnvironment": "node",
     "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|jsx)$",
     "testPathIgnorePatterns": [
       "<rootDir>/node_modules/",
       "<rootDir>/build/",
-      "<rootDir>/.next/",
       "<rootDir>/public/"
     ],
     "moduleFileExtensions": [
@@ -91,7 +109,6 @@
     "coveragePathIgnorePatterns": [
       "<rootDir>/node_modules/",
       "<rootDir>/build/",
-      "<rootDir>/.next/",
       "<rootDir>/public/"
     ],
     "coverageThreshold": {

@@ -1,8 +1,8 @@
 import React from 'react';
 
-import imgGoogle from '../public/icons/img-google-1.jpg';
+import imgGoogle from '../public/images/img-google-1.jpg';
 
-import '../styles/styles.css';
+import '../public/styles/main.css';
 
 export default () => (
   <>
