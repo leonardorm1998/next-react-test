@@ -28,12 +28,12 @@ const news: INews[] = [
 ];
 
 const NewsList = () => (
-  <div className="column">
+  <div className='column'>
     {
       news.map((item, key) => (
-        <div key={key} className="list-container">
-          <a className="link" href={item.link}>{item.title}</a>
-          <p className="comment">Comments: {item.comments}</p>
+        <div key={key} className='list-container'>
+          <a className='link' href={item.link}>{item.title}</a>
+          <p className='comment'>Comments: {item.comments}</p>
         </div>
       ))
     }
@@ -44,7 +44,7 @@ export default () => (
   <>
     <Head>
       <title>News</title>
-      <link rel="icon" href="/favicon.ico" />
+      <link rel='icon' href='/favicon.ico' />
     </Head>
 
     <div>

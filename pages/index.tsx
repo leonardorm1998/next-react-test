@@ -4,6 +4,7 @@ import React from 'react';
 
 import '../public/styles/main.css';
 
+import Header from '../public/components/shared/header/Header';
 export default () => (
   <>
     <Head>
@@ -12,6 +13,7 @@ export default () => (
     </Head>
 
     <div>
+      <Header />
       <h1>Welcome to Next.js!</h1>
       <p>
         To get started, edit <code>pages/index.js</code> and save to reload.
