@@ -1,20 +1,23 @@
 import App from 'next/app';
-import Head from 'next/head';
 import React from 'react';
+import { Provider } from 'react-redux';
 
-class MyApp extends App {
+import withRedux from 'next-redux-wrapper';
+import initsStore from '../src/redux/store';
+
+interface IProps {
+  store: any;
+}
+class MyApp extends App<IProps> {
   public render() {
-    const { Component, pageProps } = this.props;
+    const { Component, pageProps, store } = this.props;
 
     return (
-      <>
-        <Head>
-          <title>Next.js PWA</title>
-        </Head>
+      <Provider store={store}>
         <Component {...pageProps} />
-      </>
+      </Provider>
     );
   }
 }
 
-export default MyApp;
+export default withRedux(initsStore)(MyApp);

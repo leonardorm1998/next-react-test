@@ -4,7 +4,7 @@ import React from 'react';
 
 import '../public/styles/main.css';
 
-import Header from '../public/components/shared/header/Header';
+import Header from '../src/components/header/Header';
 export default () => (
   <>
     <Head>

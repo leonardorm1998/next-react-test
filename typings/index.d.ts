@@ -1,4 +1,5 @@
 declare module '@zeit/next-css'
+declare module 'redux-multi'
 
 declare module '*.png'
 declare module '*.jpg'
