@@ -1,36 +1,28 @@
 import * as React from 'react';
 import { connect } from 'react-redux';
-import { Action as BasicAction, ActionCreator, AnyAction, bindActionCreators, Dispatch } from 'redux';
-import { decrease } from './actions';
-import { Actions as CounterActions } from './actionTypes';
+import { AnyAction, bindActionCreators, Dispatch } from 'redux';
+
+import { decrease, increase } from './actions';
+
 import { IState } from './interface';
 
-interface IProps {
-  value: number;
-  decreaseAction?: () => ActionCreator<BasicAction<CounterActions.DECREASE>>;
-}
+type IProps = ReturnType<typeof mapStateToProps> & ReturnType<typeof mapDispatchToProps>;
 
-const CounterContainer = (props: IProps) => {
-  console.log('props', props);
-  return (
-    <div>
-      {/* <button onClick={increase}>Increment</button>
-      <button onClick={decrease}>Decrement</button> */}
-      <div>{props.value}</div>
-    </div>
-  );
-};
+const CounterContainer = (props: IProps) => (
+  <div>
+    <button onClick={props.decreaseAction}>Decrement</button>
+    <button onClick={props.increaseAction}>Increment</button>
+    <div>{props.value}</div>
+  </div>
+);
 
-const mapStateToProps = (state: IState) => {
-  console.log('state', state);
-  return ({
-    value: state.counter.value,
-  });
-};
+const mapStateToProps = (state: IState) => ({
+  value: state.counter.value,
+});
 
 const mapDispatchToProps = (dispatch: Dispatch<AnyAction>) => ({
   decreaseAction: bindActionCreators(decrease, dispatch),
-  // increaseAction: bindActionCreators(increase, dispatch),
+  increaseAction: bindActionCreators(increase, dispatch),
 });
 
 export default connect(

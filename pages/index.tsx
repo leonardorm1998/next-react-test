@@ -9,7 +9,7 @@ export default () => (
   <>
     <Head>
       <title>Home</title>
-      <link rel="icon" href="/favicon.ico" />
+      <link rel='icon' href='/favicon.ico' />
     </Head>
 
     <div>
@@ -18,14 +18,14 @@ export default () => (
       <p>
         To get started, edit <code>pages/index.js</code> and save to reload.
       </p>
-      <div className="row">
-        <div className="mt-r-05">
-          <Link href="/about">
+      <div className='row'>
+        <div className='mt-r-05'>
+          <Link href='/about'>
             <a>About</a>
           </Link>
         </div>
-        <div className="mt-r-05">
-          <Link href="/news">
+        <div className='mt-r-05'>
+          <Link href='/news'>
             <a>News</a>
           </Link>
         </div>

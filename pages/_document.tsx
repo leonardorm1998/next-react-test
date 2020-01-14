@@ -15,13 +15,13 @@ class MyDocument extends Document {
 
   public render() {
     return (
-      <Html lang="en">
+      <Html lang='en'>
         <Head>
-          <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <meta name="theme-color" content="#2196F3" />
-          <meta name="description" content="Progressive Web App made with Next.js" />
-          <link rel="manifest" href="/manifest.json" />
-          <link rel="shortcut icon" href="/public/icons/favicon.ico" />
+          <meta name='viewport' content='width=device-width, initial-scale=1' />
+          <meta name='theme-color' content='#2196F3' />
+          <meta name='description' content='Progressive Web App made with Next.js' />
+          <link rel='manifest' href='/manifest.json' />
+          <link rel='shortcut icon' href='/public/icons/favicon.ico' />
         </Head>
         <body>
           <noscript>Your browser does not support JavaScript!</noscript>

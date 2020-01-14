@@ -32,7 +32,6 @@
     "url": "https://github.com/leonardorm1998/next-react-test.git"
   },
   "dependencies": {
-    "@types/redux-promise": "^0.5.28",
     "@zeit/next-css": "^1.0.1",
     "next": "9.1.7",
     "next-compose-plugins": "^2.2.0",
@@ -67,13 +66,27 @@
     "prettier": "^1.19.1",
     "react-test-renderer": "^16.12.0",
     "redux-multi": "^0.1.12",
-    "redux-promise": "^0.6.0",
     "redux-thunk": "^2.3.0",
     "ts-jest": "^24.3.0",
     "tslint": "^5.20.1",
     "tslint-react": "^4.1.0",
     "typescript": "^3.7.4",
     "validate-commit-msg": "^2.14.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-push": "npm run lint && npm test"
+    }
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    },
+    "css": "[name]_[local]__[hash:base64:5]",
+    "validate-commit-msg": {
+      "types": "conventional-commit-types",
+      "helpMessage": "Use \"npm run commit\" instead, we use conventional-changelog format :) (https://github.com/commitizen/cz-cli)"
+    }
   },
   "prettier": {
     "semi": false,
