@@ -11,7 +11,7 @@ const nextConfig = {
     if (config.mode === 'production') {
       if (Array.isArray(config.optimization.minimizer)) {
         config.optimization.minimizer.push(
-          new OptimizeCSSAssetsPlugin({})
+          new OptimizeCSSAssetsPlugin()
         )
       }
     }
