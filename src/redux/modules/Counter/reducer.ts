@@ -1,23 +1,23 @@
-import { Actions } from './actionTypes';
-import { IInitialState } from './interface';
+import { Actions } from './actionTypes'
+import { IInitialState } from './interface'
 
 export const initialState: IInitialState = {
-  value: 0,
-};
+  value: 0
+}
 
 interface IAction {
-  type: string;
+  type: string
 }
 
 const reducer = (state = initialState, action: IAction) => {
   switch (action.type) {
     case Actions.INCREASE:
-      return { value: state.value + 1 };
+      return { value: state.value + 1 }
     case Actions.DECREASE:
-      return { value: state.value - 1 };
+      return { value: state.value - 1 }
     default:
-      return state;
+      return state
   }
-};
+}
 
-export default reducer;
+export default reducer

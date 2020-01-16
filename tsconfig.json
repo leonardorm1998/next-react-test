@@ -1,33 +1,48 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "allowJs": true,
-    "alwaysStrict": true,
-    "esModuleInterop": true,
-    "isolatedModules": true,
+    "target": "esnext",
+    "module": "esnext",
     "jsx": "preserve",
+    "allowJs": false,
+    "strict": true,
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "removeComments": true,
+    "preserveConstEnums": true,
+    "sourceMap": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "baseUrl": ".",
+    "typeRoots": [
+      "./node_modules/@types",
+      "./typings"
+    ],
     "lib": [
       "dom",
       "es2017"
     ],
-    "module": "esnext",
-    "moduleResolution": "node",
-    "noEmit": true,
-    "noFallthroughCasesInSwitch": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "strict": true,
-    "target": "esnext",
-    "skipLibCheck": true,
+    "paths": {
+      "@components/*": [
+        "./src/components/*",
+      ],
+      "@Redux/*": [
+        "./src/redux/*",
+      ],
+    },
     "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
     "resolveJsonModule": true,
-    "baseUrl": "./"
+    "isolatedModules": true
   },
   "exclude": [
-    "node_modules"
-  ],
-  "include": [
-    "./typings/*.d.ts",
-    "**/*.tsx"
+    "node_modules",
+    ".next",
+    "build",
+    "next.config.js",
+    "src/**/*.test.tsx",
+    "coverage"
   ]
 }
