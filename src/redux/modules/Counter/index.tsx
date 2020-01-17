@@ -1,13 +1,18 @@
-import * as React from 'react'
+import React from 'react'
 import { connect } from 'react-redux'
-import { AnyAction, bindActionCreators, Dispatch } from 'redux'
+import { Action as BasicAction, AnyAction, bindActionCreators, Dispatch } from 'redux'
 
 import { decrease, increase } from './actions'
 
-import { IState } from './interface'
+import { Actions } from './actionTypes'
 
-type IProps = ReturnType<typeof mapStateToProps> &
-  ReturnType<typeof mapDispatchToProps>
+import { ICounterState } from './interface'
+
+interface IProps {
+  decreaseAction: () => BasicAction<Actions.DECREASE>
+  increaseAction: () => BasicAction<Actions.INCREASE>
+  value: number
+}
 
 const CounterContainer = (props: IProps) => (
   <div>
@@ -17,7 +22,7 @@ const CounterContainer = (props: IProps) => (
   </div>
 )
 
-const mapStateToProps = (state: IState) => ({
+const mapStateToProps = (state: ICounterState) => ({
   value: state.counter.value
 })
 

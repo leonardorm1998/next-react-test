@@ -1,23 +1,24 @@
+import { handleActions } from 'redux-actions'
+
 import { Actions } from './actionTypes'
+
 import { IInitialState } from './interface'
 
-export const initialState: IInitialState = {
+const initialState: IInitialState = {
   value: 0
 }
 
-interface IAction {
-  type: string
+const reducers = {
+  [Actions.INCREASE]: (state = initialState) => ({
+    ...state,
+    value: state.value + 1
+  }),
+  [Actions.DECREASE]: (state = initialState) => ({
+    ...state,
+    value: state.value - 1
+  }),
 }
 
-const reducer = (state = initialState, action: IAction) => {
-  switch (action.type) {
-    case Actions.INCREASE:
-      return { value: state.value + 1 }
-    case Actions.DECREASE:
-      return { value: state.value - 1 }
-    default:
-      return state
-  }
-}
+const reducer = handleActions(reducers, initialState)
 
 export default reducer

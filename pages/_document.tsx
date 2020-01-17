@@ -19,7 +19,7 @@ class MyDocument extends Document {
 
   public render() {
     return (
-      <Html lang="en">
+      <Html>
         <Head>
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta name="theme-color" content="#2196F3" />

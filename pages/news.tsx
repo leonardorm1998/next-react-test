@@ -1,7 +1,6 @@
-import Head from 'next/head'
 import React from 'react'
 
-import '../public/styles/main.css'
+import '@Styles/main.css'
 
 interface INews {
   title: string
@@ -44,15 +43,8 @@ const NewsList = () => (
 )
 
 export default () => (
-  <>
-    <Head>
-      <title>News</title>
-      <link rel="icon" href="/favicon.ico" />
-    </Head>
-
-    <div>
-      <h1>Welcome to News Page!</h1>
-      <NewsList />
-    </div>
-  </>
+  <div>
+    <h1>Welcome to News Page!</h1>
+    <NewsList />
+  </div>
 )

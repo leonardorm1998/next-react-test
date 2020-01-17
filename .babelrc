@@ -13,7 +13,10 @@
             ],
             "alias": {
               "@components": "./src/components",
-              "@Redux": "./src/redux"
+              "@Redux": "./src/redux",
+              "@Images": "./src/images",
+              "@Styles": "./src/styles",
+              "@Pages": "./pages"
             }
           }
         ],
@@ -38,7 +41,10 @@
             ],
             "alias": {
               "@components": "./src/components",
-              "@Redux": "./src/redux"
+              "@Redux": "./src/redux",
+              "@Images": "./src/images",
+              "@Styles": "./src/styles",
+              "@Pages": "./pages"
             }
           }
         ],
@@ -70,7 +76,10 @@
             ],
             "alias": {
               "@components": "./src/components",
-              "@Redux": "./src/redux"
+              "@Redux": "./src/redux",
+              "@Images": "./src/images",
+              "@Styles": "./src/styles",
+              "@Pages": "./pages"
             }
           }
         ]

@@ -1,15 +1,14 @@
 import App from 'next/app'
 import React from 'react'
-import { Provider, ProviderProps } from 'react-redux'
-import { AnyAction } from 'redux'
+import { Provider } from 'react-redux'
 
-import withRedux from 'next-redux-wrapper'
-import initsStore from '../src/redux/store'
+import configureStore from '@Redux/store';
 
-class MyApp extends App<Readonly<ProviderProps<AnyAction>>> {
+const store = configureStore();
+
+class MyApp extends App {
   public render() {
-    const { Component, pageProps, store } = this.props
-
+    const { Component, pageProps } = this.props
     return (
       <Provider store={store}>
         <Component {...pageProps} />
@@ -18,4 +17,4 @@ class MyApp extends App<Readonly<ProviderProps<AnyAction>>> {
   }
 }
 
-export default withRedux(initsStore)(MyApp)
+export default (MyApp)

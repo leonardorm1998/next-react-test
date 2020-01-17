@@ -1,9 +1,5 @@
-export interface IState {
-  counter: {
-    value: number
-  }
+export interface ICounterState {
+  counter: IInitialState
 }
 
-export interface IInitialState {
-  value: number
-}
+export interface IInitialState { value: number }
