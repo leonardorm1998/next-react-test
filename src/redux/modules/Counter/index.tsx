@@ -1,6 +1,11 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { Action as BasicAction, AnyAction, bindActionCreators, Dispatch } from 'redux'
+import {
+  Action as BasicAction,
+  AnyAction,
+  bindActionCreators,
+  Dispatch
+} from 'redux'
 
 import { decrease, increase } from './actions'
 

@@ -51,7 +51,6 @@
     ".next",
     "build",
     "next.config.js",
-    "src/**/**/*.test.tsx",
     "coverage"
   ]
 }

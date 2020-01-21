@@ -2,7 +2,7 @@ import React from 'react'
 
 import CounterContainer from '@Redux/modules/Counter'
 
-// import imgGoogle from '@Images/img-google-1.jpg'
+import imgGoogle from '@Images/img-google-1.jpg'
 
 import '@Styles/main.css'
 
@@ -14,7 +14,7 @@ const About = () => {
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus diam
         lacus, placerat vel enim ut, posuere vestibulum
       </p>
-      {/* <img src={imgGoogle} alt="img-google" width="300" height="300" /> */}
+      <img src={imgGoogle} alt="img-google" width="300" height="300" />
       <CounterContainer />
     </>
   )

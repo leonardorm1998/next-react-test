@@ -1,14 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Should render Header component should render correctly 1`] = `
+exports[`Should render Header component #should render correctly 1`] = `
+.c0 {
+  background: red;
+}
+
 <header
-  className="sc-AykKC iLTvVK"
+  className="c0"
 >
   <h1>
     Header Example
   </h1>
   <img
+    height="200"
     src="test-file-stub"
+    width="200"
   />
+  <test-file-stub />
 </header>
 `;

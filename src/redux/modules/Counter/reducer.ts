@@ -16,7 +16,7 @@ const reducers = {
   [Actions.DECREASE]: (state = initialState) => ({
     ...state,
     value: state.value - 1
-  }),
+  })
 }
 
 const reducer = handleActions(reducers, initialState)
